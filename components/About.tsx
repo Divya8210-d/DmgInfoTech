@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section className="w-full bg-[#f3f3f3] py-16 px-6">
+    <section className="w-full bg-[#f3f3f3] py-16 px-6" id="about">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-stretch">
 
         {/* LEFT IMAGE (WIDER) */}

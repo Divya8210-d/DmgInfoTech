@@ -1,8 +1,134 @@
-import React from "react";
+import ServiceBlock from "./Services/servicescomp";
+
+type CardItem = {
+  title: string;
+  description: string;
+};
+
+type ServiceItem = {
+  sectionNumber: string;
+  title: string;
+  image: string;
+  cards: CardItem[];
+};
+
+export const services: ServiceItem[] = [
+  {
+    sectionNumber: "01",
+    title: "Business Systems & ERP Solutions",
+    image: "/images/erp.jpg",
+    cards: [
+      {
+        title: "Microsoft Dynamics Implementation",
+        description:
+          "Seamless setup and deployment of Microsoft Dynamics solutions tailored to your business processes.",
+      },
+      {
+        title: "LS Retail Solutions",
+        description:
+          "Integrated retail management systems designed to improve operations, POS performance, and customer experience.",
+      },
+      {
+        title: "ERP Upgrade Services",
+        description:
+          "Smooth system upgrades that enhance performance, features, and long-term scalability.",
+      },
+      {
+        title: "Support & Troubleshooting",
+        description:
+          "Reliable technical support to resolve issues quickly and keep your systems running efficiently.",
+      },
+    ],
+  },
+
+  {
+    sectionNumber: "02",
+    title: "Infrastructure & Cloud Services",
+    image: "/images/infrastructure.jpg",
+    cards: [
+      {
+        title: "IT Infrastructure",
+        description:
+          "Robust infrastructure solutions built for stability, performance, and business continuity.",
+      },
+      {
+        title: "Cloud Services",
+        description:
+          "Scalable cloud environments that improve flexibility, collaboration, and data accessibility.",
+      },
+      {
+        title: "Backup & Recovery",
+        description:
+          "Secure backup systems and fast recovery solutions to protect critical business data.",
+      },
+      {
+        title: "IT Support",
+        description:
+          "Ongoing monitoring and technical assistance to ensure smooth day-to-day operations.",
+      },
+    ],
+  },
+
+  {
+    sectionNumber: "03",
+    title: "Security & Protection",
+    image: "/images/security.jpg",
+    cards: [
+      {
+        title: "Network Security",
+        description:
+          "Advanced security solutions to safeguard networks from cyber threats and vulnerabilities.",
+      },
+      {
+        title: "Endpoint Protection",
+        description:
+          "Comprehensive endpoint security to defend devices across your organization.",
+      },
+      {
+        title: "Firewall & Monitoring",
+        description:
+          "Real-time monitoring and firewall management to prevent unauthorized access.",
+      },
+      {
+        title: "Risk Assessment",
+        description:
+          "Security audits and assessments to identify and mitigate potential risks.",
+      },
+    ],
+  },
+
+  {
+    sectionNumber: "04",
+    title: "Digital & Innovation Solutions",
+    image: "/images/digital.jpg",
+    cards: [
+      {
+        title: "Custom Software Development",
+        description:
+          "Tailored software solutions designed to meet your business objectives.",
+      },
+      {
+        title: "Cloud Application Development",
+        description:
+          "Modern scalable applications built for cloud-native environments.",
+      },
+      {
+        title: "Automation Solutions",
+        description:
+          "Workflow automation systems to increase efficiency and reduce manual processes.",
+      },
+      {
+        title: "UI/UX & Experience Design",
+        description:
+          "User-focused digital experiences that improve engagement and usability.",
+      },
+    ],
+  },
+];
 
 const ServicesSection = () => {
   return (
-    <section className="w-full bg-[#f3f3f3] py-20 px-6">
+    <section className="w-full bg-[#f3f3f3] py-20 px-6" id="services">
       <div className="max-w-7xl mx-auto grid grid-rows-2 gap-16">
 
         {/* TOP CONTENT */}
@@ -111,6 +237,16 @@ const ServicesSection = () => {
 
         </div>
       </div>
+      {services.map((service, idx) => (
+        <ServiceBlock
+          key={idx}
+          sectionNumber={service.sectionNumber}
+          title={service.title}
+          image={service.image}
+          cards={service.cards}
+          reverse={idx % 2 !== 0}   // 🔥 automatic alternating layout
+        />
+      ))}
     </section>
   );
 };

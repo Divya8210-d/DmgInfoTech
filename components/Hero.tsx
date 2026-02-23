@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="w-full bg-[#f3f3f3] py-12 px-6 min-h-screen pt-20">
+    <div className="w-full bg-[#f3f3f3] py-12 px-6 min-h-screen pt-20" id="hero">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
 
         {/* LEFT SECTION (WIDER) */}
