@@ -93,25 +93,17 @@ To become a trusted global technology partner delivering high-quality digital so
 - HTML5  
 - CSS3  
 - JavaScript  
-- React  
-- Bootstrap  
+- React    
 
 ### Backend
 - Node.js  
-- PHP  
 - REST APIs  
-
-### Database
-- MySQL  
-
-### CMS
-- WordPress  
 
 ### Tools & Platforms
 - GitHub  
 - VS Code  
 - npm  
-- Hosting Platforms  
+- Vercel
 
 ---
 
@@ -129,113 +121,60 @@ To become a trusted global technology partner delivering high-quality digital so
 
 ---
 
-## 📁 Project Structure
+## ⚙️ Installation
 
+Follow these steps to run the project locally.
 
-DmgInfoTech/
-│
-├── components/
-│ ├── Navbar.tsx
-│ ├── Hero.tsx
-│ ├── About.tsx
-│ └── Services/
-│ └── servicescomp.tsx
-│
-├── public/
-│ ├── images/
-│ ├── icons/
-│ └── assets/
-│
-├── src/
-│ └── app/
-│ ├── layout.tsx
-│ ├── page.tsx
-│ ├── globals.css
-│ └── favicon.ico
-│
-├── package.json
-├── tsconfig.json
-├── next.config.ts
-└── README.md
+### 1. Clone the Repository
 
-
----
-
-## ⚙ Installation
-
-Clone the repository:
-
-bash
+```bash
 git clone https://github.com/Divya8210-d/DmgInfoTech.git
 cd DmgInfoTech
+```
 
-Install dependencies:
-
+### 2.Install dependencies:
+```bash
 npm install
-
-Run development server:
-
+```
+### 3.Run development server:
+```bash
 npm run dev
-
-Open in browser:
-
+```
+### 4.Open in browser:
+```bash
 http://localhost:3000
-💻 Usage
+```
 
-This project can be used by businesses and developers to:
-
-Build a professional company website
-
-Create a digital services platform
-
-Showcase IT services
-
-Present company portfolios
-
-Develop modern corporate web applications
-
-Developers can customize components and extend functionality according to business requirements.
-
-📷 Screenshots
-
-Add project screenshots here.
-
-Example:
-
-/screenshots/homepage.png
-/screenshots/services.png
-/screenshots/about.png
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome and appreciated.
-
 To contribute:
 
-Fork the repository
-
-Create a feature branch
-
+### 1.Fork the repository
+Click the Fork button on GitHub.
+### 2.Create a feature branch
+```bash
 git checkout -b feature/new-feature
-
-Commit changes
-
+```
+### 3.Commit changes
+```bash
 git commit -m "Add new feature"
-
-Push branch
-
+```
+### 4.Push branch
+```bash
 git push origin feature/new-feature
-
-Open a Pull Request
-
+```
+### 5.Open a Pull Request
+```bash
 Please ensure your code follows clean coding practices and proper documentation.
-
-📜 License
+```
+## 📜 License
 
 This project is licensed under the MIT License.
 
 See the LICENSE file for details.
 
-📬 Contact
+## 📬 Contact
 
 Company Name:
 DMG InfoTech
