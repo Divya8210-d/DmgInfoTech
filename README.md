@@ -43,57 +43,101 @@ To become a trusted global technology partner delivering high-quality digital so
 
 ## 🚀 Services
 
-### 🌐 Web Development
-- Responsive Websites
-- Custom Web Applications
-- CMS Development
-- Landing Pages
-- Business Websites
 
-### 📈 Digital Marketing
-- SEO Optimization
-- Social Media Marketing
-- Content Strategy
-- Search Engine Marketing
-- Performance Analytics
+### 🖥 Managing IT Services
+Comprehensive IT management tailored for Maritime and Retail operations.
 
-### 🎨 Design Services
-- UI/UX Design
-- Logo Design
-- Branding
-- Graphic Design
-- Business Identity Design
+- Proactive system monitoring
+- Infrastructure management
+- System optimization
+- 24/7 technical support
+- Performance maintenance
 
-### 🛒 E-commerce Solutions
-- Online Store Development
-- Payment Integration
-- Product Management
-- Order Management
-- Shopping Cart Systems
+---
 
-### ☁ Domain & Hosting
-- Domain Registration
-- Web Hosting
-- Server Setup
-- Website Deployment
-- Maintenance Services
+### 🔐 Cybersecurity
+Advanced security solutions protecting critical business data.
 
-### 🧩 CMS & WordPress
-- WordPress Development
-- Custom Themes
-- Plugin Integration
-- CMS Customization
-- Website Migration
+- Threat detection
+- Security monitoring
+- Compliance management
+- Risk assessment
+- Incident response protocols
+
+---
+
+### ☁ Cloud Solutions
+Scalable cloud infrastructure and migration services.
+
+- Cloud deployment
+- Cloud migration
+- Secure storage
+- Remote accessibility
+- Cost optimization
+
+---
+
+### 🌐 Network Infrastructure
+Enterprise-grade network design and deployment.
+
+- Network architecture design
+- Secure connectivity
+- Enterprise networking
+- Redundancy and failover systems
+- High-performance infrastructure
+
+---
+
+### 💾 Data Backup & Recovery
+Comprehensive data protection and disaster recovery solutions.
+
+- Automated backups
+- Secure data storage
+- Disaster recovery planning
+- Rapid data restoration
+- Business continuity solutions
+
+---
+
+### 🧑‍💻 Help Desk Support
+Dedicated technical support available around the clock.
+
+- Technical troubleshooting
+- User support
+- System maintenance
+- Issue resolution
+- Productivity optimization
+
+---
+
+### 📱 Social Media Marketing
+Strategic marketing campaigns to grow your brand presence.
+
+- Content creation
+- Campaign management
+- Audience engagement
+- Brand awareness
+- Performance tracking
+
+---
+
+### 🌍 Website Design & Development
+Custom-built websites designed to convert visitors into customers.
+
+- Responsive design
+- Modern UI/UX
+- Performance optimization
+- SEO-friendly development
+- Business-focused design
+
 
 ---
 
 ## 🛠 Tech Stack
 
 ### Frontend
-- HTML5  
-- CSS3  
-- JavaScript  
-- React    
+-Next JS
+-Tailwind
 
 ### Backend
 - Node.js  
