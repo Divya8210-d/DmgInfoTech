@@ -137,8 +137,8 @@ Custom-built websites designed to convert visitors into customers.
 
 ### Frontend
 
--Next JS
--Tailwind
+- Next JS
+- Tailwind
 
 ### Backend
 - Node.js  
