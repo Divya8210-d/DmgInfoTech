@@ -26,9 +26,8 @@ const ServiceBlock = ({
 
         {/* Title */}
         <h2
-          className={`text-3xl md:text-4xl font-bold text-gray-900 mb-12 ${
-            reverse ? "text-right" : "text-left"
-          }`}
+          className={`text-3xl md:text-4xl font-bold text-gray-900 mb-12 ${reverse ? "text-right" : "text-left"
+            }`}
         >
           <span className="text-[#18c5a9] mr-3">{sectionNumber}</span>
           {title}
@@ -36,9 +35,8 @@ const ServiceBlock = ({
 
         {/* Grid */}
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch ${
-            reverse ? "lg:flex-row-reverse" : ""
-          }`}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch ${reverse ? "lg:flex-row-reverse" : ""
+            }`}
         >
           {/* Image */}
           <div className={`relative w-full h-[400px] rounded-3xl overflow-hidden shadow-lg ${reverse ? "order-2 lg:order-2" : ""}`}>

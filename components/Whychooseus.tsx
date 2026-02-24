@@ -1,0 +1,84 @@
+
+
+const WhyChooseUs = () => {
+  return (
+    <section className="w-full bg-[#0b1b33] py-24 px-6">
+      <div className="max-w-8xl p-10 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        {/* LEFT CONTENT */}
+        <div>
+
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 border border-gray-500 rounded-full px-4 py-2 text-sm text-gray-300 mb-8">
+            <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+            WHY CHOOSE US
+          </div>
+
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-8">
+            We combine technical expertise and a client-focused approach
+            to deliver reliable solutions that drive real business results.
+          </h2>
+
+          {/* Divider */}
+          <div className="w-full h-[2px] bg-[#18c5a9] mb-10"></div>
+
+          {/* Feature 01 */}
+          <div className="mb-10">
+            <h3 className="text-[#18c5a9] text-xl font-semibold mb-3">
+              01 Certified Expertise
+            </h3>
+            <p className="text-gray-300 leading-relaxed">
+              Experienced professionals with strong knowledge in IT
+              infrastructure, ERP systems, and digital solutions.
+            </p>
+          </div>
+
+          <div className="w-full h-[2px] bg-[#18c5a9] mb-10"></div>
+
+          {/* Feature 02 */}
+          <div className="mb-10">
+            <h3 className="text-[#18c5a9] text-xl font-semibold mb-3">
+              02 End-to-End Support
+            </h3>
+            <p className="text-gray-300 leading-relaxed">
+              From planning and implementation to training and ongoing
+              support — we stay with you at every step.
+            </p>
+          </div>
+
+          <div className="w-full h-[2px] bg-[#18c5a9] mb-10"></div>
+
+          {/* Feature 03 */}
+          <div>
+            <h3 className="text-[#18c5a9] text-xl font-semibold mb-3">
+              03 Business-Focused Solutions
+            </h3>
+            <p className="text-gray-300 leading-relaxed">
+              We design technology around your business goals, ensuring
+              practical and measurable outcomes.
+            </p>
+          </div>
+
+        </div>
+
+        {/* RIGHT CONTENT (Overlapping Blocks) */}
+        <div className="relative w-full h-[500px]">
+
+          {/* Top Right Block */}
+          <div className="absolute top-0 right-0 w-[260px] h-[260px] bg-[#d6b2b2]"></div>
+
+          {/* Middle Left Block */}
+          <div className="absolute top-[120px] left-[40px] w-[300px] h-[300px] bg-[#e6a1a1]"></div>
+
+          {/* Bottom Right Block */}
+          <div className="absolute bottom-0 right-[20px] w-[320px] h-[320px] bg-[#e99999]"></div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default WhyChooseUs;

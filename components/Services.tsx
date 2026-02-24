@@ -1,3 +1,11 @@
+
+
+
+
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
 import ServiceBlock from "./Services/servicescomp";
 
 type CardItem = {
@@ -11,6 +19,7 @@ type ServiceItem = {
   image: string;
   cards: CardItem[];
 };
+
 
 export const services: ServiceItem[] = [
   {
@@ -126,117 +135,132 @@ export const services: ServiceItem[] = [
   },
 ];
 
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: (delay: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      delay,
+    },
+  }),
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: i * 0.15,
+    },
+  }),
+};
+
 const ServicesSection = () => {
   return (
-    <section className="w-full bg-[#f3f3f3] py-20 px-6" id="services">
-      <div className="max-w-7xl mx-auto grid grid-rows-2 gap-16">
+    <section className="w-full bg-[#f3f3f3] py-10 px-6" id="services">
+      <div className="max-w-8xl p-10 mx-auto">
 
         {/* TOP CONTENT */}
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto mb-16">
 
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 border border-gray-400 rounded-full px-4 py-2 text-sm mb-6">
+          <motion.div
+            className="inline-flex items-center gap-2 border text-black border-gray-400 rounded-full px-4 py-2 text-sm mb-6"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            custom={0.1}
+            viewport={{ once: true }}
+          >
             <span className="w-2 h-2 bg-black rounded-full"></span>
             OUR SERVICES
-          </div>
+          </motion.div>
 
-          {/* Title */}
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            custom={0.2}
+            viewport={{ once: true }}
+          >
             Technology Solutions That Work
-          </h2>
+          </motion.h2>
 
-          {/* Subtitle */}
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <motion.p
+            className="text-gray-600 text-lg leading-relaxed"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            custom={0.3}
+            viewport={{ once: true }}
+          >
             From infrastructure and security to digital development, we deliver
             technology services that solve real business challenges.
-          </p>
+          </motion.p>
         </div>
 
-        {/* BOTTOM CARDS */}
+        {/* SERVICE CARDS */}
         <div className="flex flex-wrap justify-center gap-8">
 
-          {/* CARD 1 */}
-          <div className="relative bg-[#86d4c8] rounded-3xl p-8 w-full sm:w-[45%] lg:w-[22%] min-h-[320px]">
-            <div className="absolute -top-5 left-6 w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center text-pink-600 font-bold shadow">
-              ↗
-            </div>
+          {[
+            {
+              title: "Business Systems & ERP Solutions",
+              desc: "End-to-end ERP implementation, upgrades, and support designed to streamline operations and improve business efficiency.",
+              color: "bg-pink-200 text-pink-600",
+            },
+            {
+              title: "Network Security & Protection",
+              desc: "Advanced security services focused on protecting your systems, data, and digital operations from modern threats.",
+              color: "bg-green-200 text-green-600",
+            },
+            {
+              title: "Infrastructure & Cloud Services",
+              desc: "Reliable infrastructure and cloud solutions that ensure performance, scalability, and seamless business continuity.",
+              color: "bg-indigo-200 text-indigo-600",
+            },
+            {
+              title: "Digital & Innovation Solutions",
+              desc: "Modern digital solutions that enhance user experience, automate workflows, and drive long-term business growth.",
+              color: "bg-orange-200 text-orange-600",
+            },
+          ].map((card, i) => (
+            <motion.div
+              key={i}
+              custom={i}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="relative bg-[#86d4c8] rounded-3xl p-8 w-full sm:w-[45%] lg:w-[22%] min-h-[320px] flex flex-col cursor-pointer"
+            >
+              <div className={`absolute -top-5 left-6 w-12 h-12 rounded-full flex items-center justify-center font-bold shadow ${card.color}`}>
+                ↗
+              </div>
 
-            <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
-              Business Systems & ERP Solutions
-            </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
+                {card.title}
+              </h3>
 
-            <p className="text-gray-700 text-sm leading-relaxed mb-6">
-              End-to-end ERP implementation, upgrades, and support designed to
-              streamline operations and improve business efficiency.
-            </p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-6">
+                {card.desc}
+              </p>
 
-            <button className="text-sm font-semibold text-gray-900 flex items-center gap-2">
-              LEARN MORE →
-            </button>
-          </div>
-
-          {/* CARD 2 */}
-          <div className="relative bg-[#86d4c8] rounded-3xl p-8 w-full sm:w-[45%] lg:w-[22%] min-h-[320px]">
-            <div className="absolute -top-5 left-6 w-12 h-12 bg-green-200 rounded-full flex items-center justify-center text-green-600 font-bold shadow">
-              ↗
-            </div>
-
-            <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
-              Network Security & Protection
-            </h3>
-
-            <p className="text-gray-700 text-sm leading-relaxed mb-6">
-              Advanced security services focused on protecting your systems,
-              data, and digital operations from modern threats.
-            </p>
-
-            <button className="text-sm font-semibold text-gray-900 flex items-center gap-2">
-              LEARN MORE →
-            </button>
-          </div>
-
-          {/* CARD 3 */}
-          <div className="relative bg-[#86d4c8] rounded-3xl p-8 w-full sm:w-[45%] lg:w-[22%] min-h-[320px]">
-            <div className="absolute -top-5 left-6 w-12 h-12 bg-indigo-200 rounded-full flex items-center justify-center text-indigo-600 font-bold shadow">
-              ↗
-            </div>
-
-            <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
-              Infrastructure & Cloud Services
-            </h3>
-
-            <p className="text-gray-700 text-sm leading-relaxed mb-6">
-              Reliable infrastructure and cloud solutions that ensure
-              performance, scalability, and seamless business continuity.
-            </p>
-
-            <button className="text-sm font-semibold text-gray-900 flex items-center gap-2">
-              LEARN MORE →
-            </button>
-          </div>
-
-          {/* CARD 4 */}
-          <div className="relative bg-[#86d4c8] rounded-3xl p-8 w-full sm:w-[45%] lg:w-[22%] min-h-[320px]">
-            <div className="absolute -top-5 left-6 w-12 h-12 bg-orange-200 rounded-full flex items-center justify-center text-orange-600 font-bold shadow">
-              ↗
-            </div>
-
-            <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
-              Digital & Innovation Solutions
-            </h3>
-
-            <p className="text-gray-700 text-sm leading-relaxed mb-6">
-              Modern digital solutions that enhance user experience, automate
-              workflows, and drive long-term business growth.
-            </p>
-
-            <button className="text-sm font-semibold text-gray-900 flex items-center gap-2">
-              LEARN MORE →
-            </button>
-          </div>
+              <button className="text-sm font-semibold text-gray-900 flex items-center gap-2 mt-auto">
+                LEARN MORE →
+              </button>
+            </motion.div>
+          ))}
 
         </div>
       </div>
+
+      {/* DYNAMIC SERVICE BLOCKS */}
       {services.map((service, idx) => (
         <ServiceBlock
           key={idx}
@@ -244,7 +268,7 @@ const ServicesSection = () => {
           title={service.title}
           image={service.image}
           cards={service.cards}
-          reverse={idx % 2 !== 0}   // 🔥 automatic alternating layout
+          reverse={idx % 2 !== 0}
         />
       ))}
     </section>

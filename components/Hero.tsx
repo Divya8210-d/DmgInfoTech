@@ -1,80 +1,158 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: (delay: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      delay,
+    },
+  }),
+};
 
 const HeroSection = () => {
+  const avatarColors = ["bg-gray-400", "bg-gray-500", "bg-gray-600"];
+
   return (
-    <div className="w-full bg-[#f3f3f3] py-12 px-6 min-h-screen pt-20" id="hero">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <section
+      className="w-full bg-[#f3f3f3] py-12 px-6 min-h-screen pt-24"
+      id="hero"
+    >
+      <div className="max-w-8xl p-10 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-        {/* LEFT SECTION (WIDER) */}
-        <div
-          className="lg:col-span-2 relative rounded-3xl overflow-hidden flex items-center"
-          style={{
-            backgroundImage: "url('./vercel.svg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-[#0b1b2b]/90"></div>
+        {/* LEFT SECTION */}
+        <div className="lg:col-span-2 relative rounded-3xl overflow-hidden flex items-center min-h-[600px]">
 
-          {/* Content */}
-          <div className="relative z-10 text-white p-12 max-w-2xl">
+          <Image
+            src="https://res.cloudinary.com/dad2siqxd/image/upload/v1771151286/DGMS_uufehb.jpg"
+            alt="Hero Background"
+            fill
+            priority
+            className="object-cover"
+          />
+
+          <div className="absolute inset-0 bg-[#0b1b2b]/90 z-10"></div>
+
+          <div className="relative z-20 text-white p-12 max-w-2xl">
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 border border-white/40 rounded-full px-4 py-2 text-sm mb-6">
-              <span className="w-2 h-2 bg-white rounded-full"></span>
+            <motion.div
+              className="inline-flex items-center gap-2 border border-white/40 rounded-full px-4 py-2 text-sm mb-6"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.span
+                className="w-2 h-2 bg-[#18c5a9] rounded-full"
+                animate={{ scale: [1, 1.5, 1] }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
+              />
               ENGINEERED FOR GROWTH
-            </div>
+            </motion.div>
 
             {/* Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              custom={0.15}
+            >
               IT Solutions <br />
-              for Maritime & <br />
+              for Maritime &amp; <br />
               Retail Businesses
-            </h1>
+            </motion.h1>
 
             {/* Paragraph */}
-            <p className="text-lg text-white/80 mb-8">
+            <motion.p
+              className="text-lg text-white/80 mb-8"
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              custom={0.3}
+            >
               We help maritime and retail companies scale through secure
               infrastructure, cloud systems, and modern digital solutions.
-            </p>
+            </motion.p>
 
             {/* CTA */}
-            <div className="flex items-center gap-4 mb-10">
-              <button className="bg-[#18c5a9] text-black font-semibold px-6 py-3 rounded-full hover:opacity-90 transition">
+            <motion.div
+              className="flex items-center gap-4 mb-10"
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              custom={0.45}
+            >
+              <Link
+                href="#contact"
+                className="bg-[#18c5a9] text-black font-semibold px-6 py-3 rounded-full hover:opacity-90 transition"
+              >
                 TALK TO AN EXPERT
-              </button>
+              </Link>
 
-              <div className="w-12 h-12 bg-[#18c5a9] rounded-full flex items-center justify-center cursor-pointer hover:opacity-90 transition">
+              <motion.div
+                className="w-12 h-12 bg-[#18c5a9] rounded-full flex items-center justify-center cursor-pointer"
+                whileHover={{ scale: 1.2, rotate: 45 }}
+                whileTap={{ scale: 0.9 }}
+              >
                 ↗
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Customers */}
-            <div className="flex items-center gap-4">
+            <motion.div
+              className="flex items-center gap-4"
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              custom={0.6}
+            >
               <div className="flex -space-x-3">
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-400"></div>
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-500"></div>
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-600"></div>
+                {avatarColors.map((color, i) => (
+                  <motion.div
+                    key={i}
+                    className={`w-10 h-10 rounded-full border-2 border-white ${color}`}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.65 + i * 0.1 }}
+                  />
+                ))}
               </div>
+
               <p className="text-sm text-white/80">
-                We Have <span className="text-[#18c5a9] font-semibold">500+</span> Customers Worldwide
+                We Have{" "}
+                <span className="text-[#18c5a9] font-semibold">500+</span>{" "}
+                Customers Worldwide
               </p>
-            </div>
+            </motion.div>
+
           </div>
         </div>
 
         {/* RIGHT SECTION */}
-        <div
-          className="rounded-3xl overflow-hidden min-h-[500px]"
-          style={{
-            backgroundImage: "url('./vercel.svg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div>
+        <motion.div
+          className="relative rounded-3xl overflow-hidden min-h-[500px]"
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <Image
+            src="https://res.cloudinary.com/dad2siqxd/image/upload/v1771967741/c0ca6c05aeae9bb12f6c5c25795d24d29421d574_nu6dfd.jpg"
+            alt="Hero Side Image"
+            fill
+            className="object-cover"
+          />
+        </motion.div>
+
       </div>
-    </div>
+    </section>
   );
 };
 
