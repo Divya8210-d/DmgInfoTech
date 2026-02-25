@@ -4,6 +4,7 @@ import ServicesSection from "../../components/Services";
 import Navbar from "../../components/Navbar";
 import WhyChooseUs from "../../components/Whychooseus";
 import Footer from "../../components/Footer";
+import ContactSection from "../../components/Contact";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <WhyChooseUs />
+      <ContactSection/>
       <Footer />
     </div>
   );

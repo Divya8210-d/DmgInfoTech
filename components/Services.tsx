@@ -25,27 +25,27 @@ export const services: ServiceItem[] = [
   {
     sectionNumber: "01",
     title: "Business Systems & ERP Solutions",
-    image: "/images/erp.jpg",
+    image: "https://res.cloudinary.com/dad2siqxd/image/upload/v1772046718/d9fdb764efdf6e44cd94d8926547d1bbe0ce42e3_1_gajbpt.jpg",
     cards: [
       {
-        title: "Microsoft Dynamics Implementation",
+        title: "Microsoft Dynamics & Business Central ",
         description:
-          "Seamless setup and deployment of Microsoft Dynamics solutions tailored to your business processes.",
+          "We specialize in setting up, customizing, and improving Microsoft Dynamics enterprise solutions.",
       },
       {
-        title: "LS Retail Solutions",
+        title: "ERP Implementation & Integration",
         description:
-          "Integrated retail management systems designed to improve operations, POS performance, and customer experience.",
+          "We handle the entire process of deployment, configuration, and system integration to fit your business needs.",
       },
       {
-        title: "ERP Upgrade Services",
+        title: "ERP Support & Optimization",
         description:
-          "Smooth system upgrades that enhance performance, features, and long-term scalability.",
+          "We provide ongoing monitoring, maintenance, and performance improvements for stable ERP systems.",
       },
       {
-        title: "Support & Troubleshooting",
+        title: "Industry-Specific ERP Solutions",
         description:
-          "Reliable technical support to resolve issues quickly and keep your systems running efficiently.",
+          "We create custom workflows and solutions for maritime, industrial, and enterprise settings.",
       },
     ],
   },
@@ -53,55 +53,55 @@ export const services: ServiceItem[] = [
   {
     sectionNumber: "02",
     title: "Infrastructure & Cloud Services",
-    image: "/images/infrastructure.jpg",
+    image: "https://res.cloudinary.com/dad2siqxd/image/upload/v1772046722/3da0bc5668552fa545a4006c0309162b611efd25_1_r4qdno.jpg",
     cards: [
       {
-        title: "IT Infrastructure",
+        title: "Vessel IT Infrastructure",
         description:
-          "Robust infrastructure solutions built for stability, performance, and business continuity.",
+          "We provide complete onboard IT setup, including servers, networking, and secure system commissioning",
       },
       {
-        title: "Cloud Services",
+        title: "Network & Communication Solutions",
         description:
-          "Scalable cloud environments that improve flexibility, collaboration, and data accessibility.",
+          "We create secure network designs and satellite connections for reliable global operations.",
       },
       {
-        title: "Backup & Recovery",
+        title: "Cloud & Remote Monitoring",
         description:
-          "Secure backup systems and fast recovery solutions to protect critical business data.",
+          "We offer cloud environments with real-time monitoring for better visibility and control. ",
       },
       {
-        title: "IT Support",
+        title: "Global Deployment & IT Support",
         description:
-          "Ongoing monitoring and technical assistance to ensure smooth day-to-day operations.",
+          "We manage worldwide rollouts, hardware installations, and ongoing technical support.",
       },
     ],
   },
 
   {
     sectionNumber: "03",
-    title: "Security & Protection",
-    image: "/images/security.jpg",
+    title: "Security & Compliance",
+    image: "https://res.cloudinary.com/dad2siqxd/image/upload/v1772046717/3cdff7299f9c84f55e0280b627f91b3dbfa1b7d3_lzynfc.jpg",
     cards: [
       {
-        title: "Network Security",
+        title: "Cybersecurity & Threat Protection",
         description:
-          "Advanced security solutions to safeguard networks from cyber threats and vulnerabilities.",
+          "We conduct risk assessments, manage vulnerabilities, and deploy advanced security measures.",
       },
       {
-        title: "Endpoint Protection",
+        title: "Compliance & Certification Services",
         description:
-          "Comprehensive endpoint security to defend devices across your organization.",
+          "We help with ISO 27001 implementation, governance, and certification preparation.",
       },
       {
-        title: "Firewall & Monitoring",
+        title: "Audit & Regulatory Readiness",
         description:
-          "Real-time monitoring and firewall management to prevent unauthorized access.",
+          "We perform internal audits, gap analysis, and prepare for compliance with global standards. ",
       },
       {
-        title: "Risk Assessment",
+        title: "Business Continuity & Incident Response",
         description:
-          "Security audits and assessments to identify and mitigate potential risks.",
+          "We plan for resilience, disaster recovery, and create incident response frameworks.",
       },
     ],
   },
@@ -109,27 +109,27 @@ export const services: ServiceItem[] = [
   {
     sectionNumber: "04",
     title: "Digital & Innovation Solutions",
-    image: "/images/digital.jpg",
+    image: "https://res.cloudinary.com/dad2siqxd/image/upload/v1772046719/c307e063912c051138833af50b1c3117701619ec_k7x2hd.jpg",
     cards: [
       {
-        title: "Custom Software Development",
+        title: "Website & Digital Platform Development",
         description:
-          "Tailored software solutions designed to meet your business objectives.",
+          "We design modern web solutions to enhance your online presence and grow your business.",
       },
       {
-        title: "Cloud Application Development",
+        title: "UI/UX Experience Design",
         description:
-          "Modern scalable applications built for cloud-native environments.",
+          "We create user-focused designs that improve usability, engagement, and customer experience.",
       },
       {
-        title: "Automation Solutions",
+        title: "Automation & AI Solutions",
         description:
-          "Workflow automation systems to increase efficiency and reduce manual processes.",
+          "We offer smart automation and AI tools to boost business efficiency and decision-making.",
       },
       {
-        title: "UI/UX & Experience Design",
+        title: "Digital Strategy & Consulting",
         description:
-          "User-focused digital experiences that improve engagement and usability.",
+          "We provide technology consulting to connect digital transformation with your business goals.",
       },
     ],
   },
@@ -162,7 +162,7 @@ const cardVariants = {
 
 const ServicesSection = () => {
   return (
-    <section className="w-full bg-[#f3f3f3] py-10 px-6" id="services">
+    <section className="w-full bg-[#f3f3f3] py-10 px-6 scroll-mt-24" id="services">
       <div className="max-w-8xl p-10 mx-auto">
 
         {/* TOP CONTENT */}
@@ -237,7 +237,7 @@ const ServicesSection = () => {
               whileInView="show"
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="relative bg-[#86d4c8] rounded-3xl p-8 w-full sm:w-[45%] lg:w-[22%] min-h-[320px] flex flex-col cursor-pointer"
+              className="relative bg-[#92FFF4] rounded-3xl p-8 w-full sm:w-[45%] lg:w-[22%] min-h-[320px] flex flex-col cursor-pointer"
             >
               <div className={`absolute -top-5 left-6 w-12 h-12 rounded-full flex items-center justify-center font-bold shadow ${card.color}`}>
                 ↗

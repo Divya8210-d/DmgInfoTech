@@ -62,7 +62,7 @@ const itemVariants = {
 
 const Footer = () => {
     return (
-        <footer className="w-full bg-[#060f1e] text-white pt-20 pb-8 px-6 relative overflow-hidden">
+        <footer className="w-full bg-[#060f1e] text-white pt-20 pb-8 px-6 relative overflow-hidden scroll-mt-24">
 
             {/* Animated top border */}
             <motion.div
@@ -202,24 +202,24 @@ const Footer = () => {
                         <ul className="space-y-4 text-sm text-gray-400">
                             <li className="flex items-start gap-3">
                                 <span className="mt-0.5 text-[#18c5a9]">📍</span>
-                                <span>Dubai, UAE &amp; India Operations</span>
+                                <span> Germany</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <span className="text-[#18c5a9]">✉️</span>
                                 <a
-                                    href="mailto:info@dmginfotech.com"
+                                    href="mailto:operations@dmgits.com"
                                     className="hover:text-[#18c5a9] transition-colors"
                                 >
-                                    info@dmginfotech.com
+                                    operations@dmgits.com
                                 </a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <span className="text-[#18c5a9]">📞</span>
                                 <a
-                                    href="tel:+971000000000"
+                                    href="tel:+4915511367753"
                                     className="hover:text-[#18c5a9] transition-colors"
                                 >
-                                    +971 00 000 0000
+                                 +4915511367753   
                                 </a>
                             </li>
                         </ul>

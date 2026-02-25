@@ -1,8 +1,8 @@
-
+import Image from "next/image";
 
 const WhyChooseUs = () => {
   return (
-    <section className="w-full bg-[#0b1b33] py-24 px-6">
+    <section className="w-full bg-[#0b1b33] py-24 px-6 scroll-mt-24">
       <div className="max-w-8xl p-10 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT CONTENT */}
@@ -66,13 +66,32 @@ const WhyChooseUs = () => {
         <div className="relative w-full h-[500px]">
 
           {/* Top Right Block */}
-          <div className="absolute top-0 right-0 w-[260px] h-[260px] bg-[#d6b2b2]"></div>
+          <div className="absolute top-0 right-0 w-[260px] h-[260px] bg-[#d6b2b2]">
+                <Image
+      src="https://res.cloudinary.com/dad2siqxd/image/upload/v1772046718/997933bdad030be07f574c34f55fa59163548da0_eraxe3.jpg"
+      alt="Why choose us 1"
+      fill
+      className="object-cover"
+    />
+          </div>
 
           {/* Middle Left Block */}
-          <div className="absolute top-[120px] left-[40px] w-[300px] h-[300px] bg-[#e6a1a1]"></div>
+          <div className="absolute top-[120px] left-[40px] w-[300px] h-[300px] bg-[#e6a1a1]">
+                <Image
+      src="https://res.cloudinary.com/dad2siqxd/image/upload/v1772046717/d5717155ed2421eae8d005dc2b0008e2c48ea2d5_qftsgs.jpg"
+      alt="Why choose us 1"
+      fill
+      className="object-cover"
+    />
+          </div>
 
           {/* Bottom Right Block */}
-          <div className="absolute bottom-0 right-[20px] w-[320px] h-[320px] bg-[#e99999]"></div>
+          <div className="absolute bottom-0 right-[20px] w-[320px] h-[320px] bg-[#e99999]">    <Image
+      src="https://res.cloudinary.com/dad2siqxd/image/upload/v1772046722/80b1872dc27ec80193c09b4f3edf4e6e224eea0b_tdjpyp.jpg"
+      alt="Why choose us 1"
+      fill
+      className="object-cover"
+    /></div>
 
         </div>
 
