@@ -105,7 +105,7 @@ export default {
             service4: "Network Infrastructure",
             service5: "Data Backup & Recovery",
             service6: "Help Desk Support",
-            service7: "Others",
+            service7: "Others and Social Media",
             messageLabel: "How Can We Help?",
             messagePlaceholder: "Tell us about your project",
             btnSend: "Send Message",
@@ -118,7 +118,7 @@ export default {
         companyDesc: "Delivering advanced IT infrastructure and software solutions that empower maritime and retail businesses worldwide.",
         quickLinks: "Quick Links",
         contactUs: "Contact Us",
-        addressVal: "Germany",
+        addressVal: "Schleswig-Holstein, Germany",
         copyright: "© 2024 DMG Infotech. All Rights Reserved."
     }
 };

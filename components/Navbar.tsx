@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import Image from "next/image";
 
 const containerVariants = {
   hidden: { opacity: 0, y: -40 },
@@ -40,7 +41,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/70 border-b border-white/30"
+      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white border-b border-white/30"
       variants={containerVariants}
       initial="hidden"
       animate="show"
@@ -51,7 +52,13 @@ const Navbar = () => {
         <motion.div variants={itemVariants} className="z-10">
           <Link href="/" className="flex items-center gap-3">
 
-
+            <Image
+              src="/company.jpeg"
+              alt="DMG Infotech Logo"
+              width={50}
+              height={50}
+              className="object-contain"
+            />
             <motion.span
               className="text-lg font-semibold text-[#18c5a9]"
               whileHover={{ scale: 1.05 }}
