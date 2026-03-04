@@ -24,7 +24,7 @@ export async function POST(req: Request) {
 
         // Send a response email to the user who filled the contact form
         const mailOptionsToUser = {
-            from: process.env.EMAIL_USER || 'demo@gmail.com',
+            from:process.env.COMPANY_MAIL || 'operations@dmgits.com',
             to: email, // Sending to the email received in the contact form
             subject: 'Thank you for contacting us!',
             text: `Hello ${name},\n\nThank you for reaching out to us. We have received your message regarding "${service}" and one of our representatives will contact you shortly.\n\nYour message:\n${message}\n\nBest regards,\nYour Company Team`,
@@ -43,7 +43,7 @@ export async function POST(req: Request) {
         // Optionally, send an email to the company to notify them of the lead
         const mailOptionsToCompany = {
             from: process.env.EMAIL_USER || 'demo@gmail.com',
-            to: process.env.EMAIL_USER || 'demo@gmail.com',
+            to:process.env.COMPANY_MAIL || 'operations@dmgits.com',
             subject: `New Contact Form Submission from ${name}`,
             text: `A new contact form was submitted.\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nService: ${service}\nMessage: ${message}`,
             html: `
