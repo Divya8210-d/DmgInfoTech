@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -17,6 +18,8 @@ const fadeUp = {
 };
 
 const AboutSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section
       className="w-full bg-[#f3f3f3] py-10 sm:py-14 lg:py-16 px-4 sm:px-6 scroll-mt-24"
@@ -58,7 +61,7 @@ const AboutSection = () => {
               viewport={{ once: true }}
             >
               <span className="w-2 h-2 bg-black rounded-full"></span>
-              ABOUT COMPANY
+              {t.about.badge}
             </motion.div>
 
             <motion.h2
@@ -69,8 +72,7 @@ const AboutSection = () => {
               custom={0.2}
               viewport={{ once: true }}
             >
-              Driving Business Growth
-              Through Technology
+              {t.about.heading}
             </motion.h2>
 
             <motion.p
@@ -81,9 +83,7 @@ const AboutSection = () => {
               custom={0.3}
               viewport={{ once: true }}
             >
-              DMG Infotech provides end-to-end IT solutions designed to support
-              business performance, scalability, and digital transformation.
-              We focus on practical technology that delivers measurable results.
+              {t.about.paragraph}
             </motion.p>
           </div>
 
@@ -112,12 +112,11 @@ const AboutSection = () => {
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">
-                Our Vision
+                {t.about.visionTitle}
               </h3>
 
               <p className="text-gray-700 text-sm leading-relaxed">
-                To empower businesses with future-ready technology and
-                digital innovation.
+                {t.about.visionDesc}
               </p>
             </motion.div>
 
@@ -139,12 +138,11 @@ const AboutSection = () => {
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">
-                Our Mission
+                {t.about.missionTitle}
               </h3>
 
               <p className="text-gray-700 text-sm leading-relaxed">
-                To deliver secure, scalable, and reliable IT solutions built
-                for long-term growth.
+                {t.about.missionDesc}
               </p>
             </motion.div>
           </motion.div>

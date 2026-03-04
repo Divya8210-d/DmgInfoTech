@@ -8,7 +8,7 @@ import ContactSection from "../../components/Contact";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Navbar />
       <HeroSection />
       <AboutSection />

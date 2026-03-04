@@ -1,24 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
-const navLinks = [
-    { href: "#hero", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#services", label: "Services" },
-    { href: "#contact", label: "Contact" },
-];
-
-const services = [
-    "Business Systems & ERP",
-    "Infrastructure & Cloud",
-    "Network Security",
-    "Digital Solutions",
-    "IT Support",
-    "Custom Software",
-];
+// Dynamic navLinks and services will be defined inside the component to use translations
 
 const socialIcons = [
     {
@@ -61,6 +48,24 @@ const itemVariants = {
 };
 
 const Footer = () => {
+    const { t, language } = useLanguage();
+
+    const navLinks = useMemo(() => [
+        { href: "#hero", label: t.nav.home },
+        { href: "#about", label: t.nav.about },
+        { href: "#services", label: t.nav.services },
+        { href: "#contact", label: t.nav.contact },
+    ], [t.nav]);
+
+    const translatedServices = useMemo(() => [
+        language === "en" ? "Business Systems & ERP" : "Geschäftssysteme & ERP",
+        language === "en" ? "Infrastructure & Cloud" : "Infrastruktur & Cloud",
+        language === "en" ? "Network Security" : "Netzwerksicherheit",
+        language === "en" ? "Digital Solutions" : "Digitale Lösungen",
+        language === "en" ? "IT Support" : "IT-Support",
+        language === "en" ? "Custom Software" : "Maßgeschneiderte Software",
+    ], [language]);
+
     return (
         <footer className="w-full bg-[#060f1e] text-white pt-20 pb-8 px-6 relative overflow-hidden scroll-mt-24">
 
@@ -103,8 +108,7 @@ const Footer = () => {
                         </Link>
 
                         <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                            Empowering maritime and retail businesses with secure, scalable,
-                            and future-ready IT solutions.
+                            {t.footer.companyDesc}
                         </p>
 
                         {/* Social Icons */}
@@ -128,7 +132,7 @@ const Footer = () => {
                     {/* Quick Links */}
                     <motion.div variants={itemVariants}>
                         <h4 className="text-white font-semibold text-lg mb-6 relative">
-                            Quick Links
+                            {t.footer.quickLinks}
                             <motion.span
                                 className="absolute -bottom-2 left-0 h-[2px] bg-[#18c5a9] rounded-full"
                                 initial={{ width: 0 }}
@@ -160,7 +164,7 @@ const Footer = () => {
                     {/* Services */}
                     <motion.div variants={itemVariants}>
                         <h4 className="text-white font-semibold text-lg mb-6 relative">
-                            Our Services
+                            {t.services.badge}
                             <motion.span
                                 className="absolute -bottom-2 left-0 h-[2px] bg-[#18c5a9] rounded-full"
                                 initial={{ width: 0 }}
@@ -170,7 +174,7 @@ const Footer = () => {
                             />
                         </h4>
                         <ul className="space-y-3">
-                            {services.map((svc) => (
+                            {translatedServices.map((svc) => (
                                 <li key={svc}>
                                     <span className="group flex items-center gap-2 text-gray-400 hover:text-[#18c5a9] transition-colors duration-200 text-sm cursor-pointer">
                                         <motion.span
@@ -189,7 +193,7 @@ const Footer = () => {
                     {/* Contact */}
                     <motion.div variants={itemVariants}>
                         <h4 className="text-white font-semibold text-lg mb-6 relative">
-                            Contact Us
+                            {t.footer.contactUs}
                             <motion.span
                                 className="absolute -bottom-2 left-0 h-[2px] bg-[#18c5a9] rounded-full"
                                 initial={{ width: 0 }}
@@ -202,7 +206,7 @@ const Footer = () => {
                         <ul className="space-y-4 text-sm text-gray-400">
                             <li className="flex items-start gap-3">
                                 <span className="mt-0.5 text-[#18c5a9]">📍</span>
-                                <span> Germany</span>
+                                <span> {t.footer.addressVal}</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <span className="text-[#18c5a9]">✉️</span>
@@ -219,7 +223,7 @@ const Footer = () => {
                                     href="tel:+4915511367753"
                                     className="hover:text-[#18c5a9] transition-colors"
                                 >
-                                 +4915511367753   
+                                    +4915511367753
                                 </a>
                             </li>
                         </ul>
@@ -232,7 +236,7 @@ const Footer = () => {
                             whileTap={{ scale: 0.97 }}
                             transition={{ type: "spring", stiffness: 300 }}
                         >
-                            Get In Touch ↗
+                            {language === 'en' ? 'Get In Touch' : 'Kontakt aufnehmen'} ↗
                         </motion.a>
                     </motion.div>
 
@@ -256,14 +260,14 @@ const Footer = () => {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <p>© {new Date().getFullYear()} DMG Infotech. All rights reserved.</p>
+                    <p>{t.footer.copyright}</p>
 
                     <div className="flex items-center gap-6">
                         <a href="#" className="hover:text-[#18c5a9] transition-colors">
-                            Privacy Policy
+                            {language === 'en' ? 'Privacy Policy' : 'Datenschutzrichtlinie'}
                         </a>
                         <a href="#" className="hover:text-[#18c5a9] transition-colors">
-                            Terms of Service
+                            {language === 'en' ? 'Terms of Service' : 'Nutzungsbedingungen'}
                         </a>
                     </div>
                 </motion.div>

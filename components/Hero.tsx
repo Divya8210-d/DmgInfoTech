@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -19,6 +20,7 @@ const fadeUp = {
 
 const HeroSection = () => {
   const avatarColors = ["bg-gray-400", "bg-gray-500", "bg-gray-600"];
+  const { t } = useLanguage();
 
   return (
     <section
@@ -54,20 +56,20 @@ const HeroSection = () => {
                 animate={{ scale: [1, 1.5, 1] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}
               />
-              ENGINEERED FOR GROWTH
+              {t.hero.badge}
             </motion.div>
 
             {/* Heading */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 "
               variants={fadeUp}
               initial="hidden"
               animate="show"
               custom={0.15}
             >
-              IT Solutions <br />
-              for Maritime &amp; <br />
-              Retail Businesses
+              {t.hero.headingLine1} <br />
+              {t.hero.headingLine2} <br />
+              {t.hero.headingLine3}
             </motion.h1>
 
             {/* Paragraph */}
@@ -78,8 +80,7 @@ const HeroSection = () => {
               animate="show"
               custom={0.3}
             >
-              We help maritime and retail companies scale through secure
-              infrastructure, cloud systems, and modern digital solutions.
+              {t.hero.paragraph}
             </motion.p>
 
             {/* CTA */}
@@ -94,7 +95,7 @@ const HeroSection = () => {
                 href="#contact"
                 className="bg-[#18c5a9] text-black font-semibold px-5 sm:px-6 py-3 rounded-full hover:opacity-90 transition text-sm sm:text-base"
               >
-                TALK TO AN EXPERT
+                {t.talkToExpert}
               </Link>
 
               <motion.div
@@ -127,9 +128,9 @@ const HeroSection = () => {
               </div>
 
               <p className="text-xs sm:text-sm text-white/80">
-                We Have{" "}
+                {t.hero.customersWeHave}{" "}
                 <span className="text-[#18c5a9] font-semibold">500+</span>{" "}
-                Customers Worldwide
+                {t.hero.customersWorldwide}
               </p>
             </motion.div>
 
