@@ -83,8 +83,40 @@ const ServicesSection = () => {
         },
       ],
     },
+    
     {
       sectionNumber: "02",
+      title: language === "en" ? "ISO Compliance & Security Services " : "ISO Compliance & Security Services ",
+      image: "https://res.cloudinary.com/dad2siqxd/image/upload/v1772046722/3da0bc5668552fa545a4006c0309162b611efd25_1_r4qdno.jpg",
+      cards: [
+        {
+          title: language === "en" ? "ISO 27001 Implementation" : "ISO 27001 Implementierung",
+          description: language === "en"
+            ? "Comprehensive instructions for implementing ISO/IEC 27001, risk assessments, certification preparation, and ISMS framework design."
+            : "Umfassende Anleitungen zur Implementierung von ISO/IEC 27001, Risikobewertungen, Zertifizierungsvorbereitung und Gestaltung des ISMS-Frameworks.",
+        },
+        {
+          title: language === "en" ? "Compliance Gap Analysis & Readiness" : "Compliance-Lückenanalyse und Bereitschaftsbewertung",
+          description: language === "en"
+            ? "To find compliance gaps and create a structured roadmap for regulatory readiness, conduct a thorough evaluation of your current systems."
+            : "Um Compliance-Lücken zu identifizieren und einen strukturierten Fahrplan für die regulatorische Bereitschaft zu erstellen, führen wir eine gründliche Bewertung Ihrer aktuellen Systeme durch.",
+        },
+        {
+          title: language === "en" ? "Information Security Framework Setup (Security)" : "Einrichtung des Informationssicherheits-Frameworks (Sicherheit)",
+          description: language === "en"
+            ? "We assess risks, manage vulnerabilities, and implement security measures."
+            : "Wir bewerten Risiken, verwalten Schwachstellen und implementieren Sicherheitsmaßnahmen.",
+        },
+        {
+          title: language === "en" ? "Audit Preparation & Governance" : "Audit-Vorbereitung & Governance",
+          description: language === "en"
+            ? "Internal audit simulations, documentation support, and policy development make sure certification and regulatory approvals go smoothly."
+            : "Interne Auditsimulationen, Dokumentationsunterstützung und Richtlinienentwicklung sorgen für reibungslose Zertifizierungs- und behördliche Genehmigungsverfahren.",
+        },
+      ],
+    },
+    {
+      sectionNumber: "03",
       title: language === "en" ? "Digital & Innovation Solutions" : "Digitale & Innovationslösungen",
       image: "https://res.cloudinary.com/dad2siqxd/image/upload/v1772046719/c307e063912c051138833af50b1c3117701619ec_k7x2hd.jpg",
       cards: [
@@ -114,37 +146,6 @@ const ServicesSection = () => {
         },
       ],
     },
-    {
-      sectionNumber: "03",
-      title: language === "en" ? "ISO Compliance & Security Services " : "ISO Compliance & Security Services ",
-      image: "https://res.cloudinary.com/dad2siqxd/image/upload/v1772046722/3da0bc5668552fa545a4006c0309162b611efd25_1_r4qdno.jpg",
-      cards: [
-        {
-          title: language === "en" ? "ISO 27001 Implementation" : "ISO 27001 Implementierung",
-          description: language === "en"
-            ? "Comprehensive instructions for implementing ISO/IEC 27001, risk assessments, certification preparation, and ISMS framework design."
-            : "Umfassende Anleitungen zur Implementierung von ISO/IEC 27001, Risikobewertungen, Zertifizierungsvorbereitung und Gestaltung des ISMS-Frameworks.",
-        },
-        {
-          title: language === "en" ? "Compliance Gap Analysis & Readiness" : "Compliance-Lückenanalyse und Bereitschaftsbewertung",
-          description: language === "en"
-            ? "To find compliance gaps and create a structured roadmap for regulatory readiness, conduct a thorough evaluation of your current systems."
-            : "Um Compliance-Lücken zu identifizieren und einen strukturierten Fahrplan für die regulatorische Bereitschaft zu erstellen, führen wir eine gründliche Bewertung Ihrer aktuellen Systeme durch.",
-        },
-        {
-          title: language === "en" ? "Information Security Framework Setup (Security)" : "Einrichtung des Informationssicherheits-Frameworks (Sicherheit)",
-          description: language === "en"
-            ? "We assess risks, manage vulnerabilities, and implement security measures."
-            : "Wir bewerten Risiken, verwalten Schwachstellen und implementieren Sicherheitsmaßnahmen.",
-        },
-        {
-          title: language === "en" ? "Audit Preparation & Governance" : "Audit-Vorbereitung & Governance",
-          description: language === "en"
-            ? "Internal audit simulations, documentation support, and policy development make sure certification and regulatory approvals go smoothly."
-            : "Interne Auditsimulationen, Dokumentationsunterstützung und Richtlinienentwicklung sorgen für reibungslose Zertifizierungs- und behördliche Genehmigungsverfahren.",
-        },
-      ],
-    }
 
   ], [language]);
 
