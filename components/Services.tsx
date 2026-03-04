@@ -8,6 +8,7 @@ import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import ServiceBlock from "./Services/servicescomp";
 import { useLanguage } from "@/context/LanguageContext";
+import Image from "next/image";
 
 type CardItem = {
   title: string;
@@ -144,7 +145,7 @@ const ServicesSection = () => {
         },
       ],
     }
-    
+
   ], [language]);
 
   return (
@@ -201,20 +202,16 @@ const ServicesSection = () => {
                 ? "Reliable IT support services designed to keep your systems secure, stable, and running smoothly across vessels and business operations worldwide."
                 : "Zuverlässige IT-Supportdienste, die sicherstellen, dass Ihre Systeme sicher, stabil und reibungslos über Schiffe und Geschäftsbetriebe weltweit laufen.",
               color: "bg-pink-200 text-pink-600",
+              icon: "/support.png"
             },
-            {
-              title: language === "en" ? "Complimentary Services" : "Komplementäre Dienstleistungen",
-              desc: language === "en"
-                ? "Supporting services that enhance business operations through reliable infrastructure, enterprise systems, and cloud solutions."
-                : "Unterstützende Dienstleistungen, die Geschäftsabläufe durch zuverlässige Infrastruktur, Unternehmenssysteme und Cloud-Lösungen verbessern.",
-              color: "bg-green-200 text-green-600",
-            },
+         
             {
               title: language === "en" ? "Digital & Innovation Solutions" : "Digitale & Innovationslösungen",
               desc: language === "en"
                 ? "Our modern digital solutions improve user experience, simplify workflows, and drive long-term business growth."
                 : "Unsere modernen digitalen Lösungen verbessern das Benutzererlebnis, vereinfachen Arbeitsabläufe und fördern langfristiges Geschäftswachstum.",
               color: "bg-indigo-200 text-indigo-600",
+              icon:"/support.png"
             },
             {
               title: language === "en" ? "ISO Compliance & Security Services" : "ISO-Konformität & Sicherheitsdienste",
@@ -222,6 +219,15 @@ const ServicesSection = () => {
                 ? "Compliance and security solutions that protect systems, manage risks, and ensure adherence to industry standards."
                 : "Konformitäts- und Sicherheitslösungen, die Systeme schützen, Risiken managen und die Einhaltung von Industriestandards gewährleisten.",
               color: "bg-orange-200 text-orange-600",
+              icon:"/infras.png"
+            },
+               {
+              title: language === "en" ? "Complimentary Services" : "Komplementäre Dienstleistungen",
+              desc: language === "en"
+                ? "Supporting services that enhance business operations through reliable infrastructure, enterprise systems, and cloud solutions."
+                : "Unterstützende Dienstleistungen, die Geschäftsabläufe durch zuverlässige Infrastruktur, Unternehmenssysteme und Cloud-Lösungen verbessern.",
+              color: "bg-green-200 text-green-600",
+              icon:"/cloud.png"
             },
           ].map((card, i) => (
             <motion.div
@@ -232,10 +238,10 @@ const ServicesSection = () => {
               whileInView="show"
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="relative bg-[#92FFF4] rounded-3xl p-8 w-full sm:w-[45%] lg:w-[22%] min-h-[320px] flex flex-col cursor-pointer"
+              className="relative bg-[#92FFF4] rounded-3xl p-8 w-full sm:w-[45%] lg:w-[22%] min-h-[280px] flex flex-col cursor-pointer"
             >
               <div className={`absolute -top-5 left-6 w-12 h-12 rounded-full flex items-center justify-center font-bold shadow ${card.color}`}>
-                ↗
+                <Image src={card.icon} alt="icon" width={50} height={50} />
               </div>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
@@ -266,7 +272,7 @@ const ServicesSection = () => {
       ))}
 
 
-     <div className="max-w-8xl p-10 mx-auto">
+      <div className="max-w-8xl p-10 mx-auto">
 
         {/* TOP CONTENT */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -282,7 +288,7 @@ const ServicesSection = () => {
             {language === "en" ? "Complimentary Services" : "Komplementäre Dienstleistungen"}
           </motion.h2>
 
-         
+
         </div>
 
         {/* SERVICE CARDS */}
@@ -295,6 +301,7 @@ const ServicesSection = () => {
                 ? "Deployment and integration of enterprise systems such as Microsoft Dynamics and Business Central to streamline finance and operational workflows."
                 : "Einsatz und Integration von Unternehmenssystemen wie Microsoft Dynamics und Business Central zur Optimierung von Finanz- und Betriebsabläufen.",
               color: "bg-pink-200 text-pink-600",
+              icon: "/support.png"
             },
             {
               title: language === "en" ? "Managed ERP Support & Optimization" : "Verwalteter ERP-Support & Optimierung",
@@ -302,6 +309,7 @@ const ServicesSection = () => {
                 ? "Ongoing monitoring, upgrades, and performance improvements to keep ERP platforms stable and efficient."
                 : "Laufende Überwachung, Upgrades und Leistungsverbesserungen, um ERP-Plattformen stabil und effizient zu halten.",
               color: "bg-green-200 text-green-600",
+              icon: "/support.png"
             },
             {
               title: language === "en" ? "IT Infrastructure & Network Solutions" : "IT-Infrastruktur & Netzwerklösungen",
@@ -309,6 +317,7 @@ const ServicesSection = () => {
                 ? "Design and deployment of secure infrastructure, networking systems, and onboard vessel IT environments."
                 : "Entwurf und Bereitstellung sicherer Infrastruktur, Netzwerksysteme und IT-Umgebungen an Bord von Schiffen.",
               color: "bg-indigo-200 text-indigo-600",
+              icon: "/infras.png"
             },
             {
               title: language === "en" ? "Cloud & Connectivity Services" : "Cloud- & Konnektivitätsdienste",
@@ -316,6 +325,7 @@ const ServicesSection = () => {
                 ? "Scalable cloud environments, remote monitoring, and connectivity solutions supporting reliable global operations."
                 : "Skalierbare Cloud-Umgebungen, Fernüberwachung und Konnektivitätslösungen zur Unterstützung zuverlässiger globaler Abläufe.",
               color: "bg-orange-200 text-orange-600",
+              icon: "/cloud.png"
             },
           ].map((card, i) => (
             <motion.div
@@ -326,10 +336,10 @@ const ServicesSection = () => {
               whileInView="show"
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="relative bg-[#92FFF4] rounded-3xl p-8 w-full sm:w-[45%] lg:w-[22%] min-h-[320px] flex flex-col cursor-pointer"
+              className="relative bg-[#92FFF4] rounded-3xl p-8 w-full sm:w-[45%] lg:w-[22%] min-h-[280px] flex flex-col cursor-pointer"
             >
-              <div className={`absolute -top-5 left-6 w-12 h-12 rounded-full flex items-center justify-center font-bold shadow ${card.color}`}>
-                ↗
+              <div className={`absolute -top-5 left-6 w-12 h-12 rounded-full flex items-center justify-center font-bold shadow ${card.color} overflow-hidden`}>
+                {card.icon ? <Image src={card.icon} alt="icon" width={50} height={50} className="object-cover" /> : "↗"}
               </div>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">
@@ -346,7 +356,7 @@ const ServicesSection = () => {
 
         </div>
       </div>
-      
+
 
 
 
