@@ -31,10 +31,10 @@ const WhyChooseUs = () => {
 
           {/* Feature 01 */}
           <div className="mb-10">
-            <h3 className="text-[#18c5a9] text-xl font-semibold mb-3">
+            <h3 className="text-[#18c5a9] text-2xl font-semibold mb-3">
               01 {t.whyChooseUs.expertsTitle}
             </h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-lg">
               {language === 'en'
                 ? "Experienced professionals with strong knowledge in IT infrastructure, ERP systems, and digital solutions."
                 : "Erfahrene Fachleute mit fundierten Kenntnissen in IT-Infrastruktur, ERP-Systemen und digitalen Lösungen."}
@@ -45,10 +45,10 @@ const WhyChooseUs = () => {
 
           {/* Feature 02 */}
           <div className="mb-10">
-            <h3 className="text-[#18c5a9] text-xl font-semibold mb-3">
+            <h3 className="text-[#18c5a9] text-2xl font-semibold mb-3">
               02 {t.whyChooseUs.supportTitle}
             </h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-lg">
               {language === 'en'
                 ? "From planning and implementation to training and ongoing support — we stay with you at every step."
                 : "Von der Planung über die Implementierung bis hin zur Schulung und fortlaufenden Betreuung – wir begleiten Sie auf jedem Schritt."}
@@ -59,10 +59,10 @@ const WhyChooseUs = () => {
 
           {/* Feature 03 */}
           <div>
-            <h3 className="text-[#18c5a9] text-xl font-semibold mb-3">
+            <h3 className="text-[#18c5a9] text-2xl font-semibold mb-3">
               03 {language === 'en' ? "Business-Focused Solutions" : "Geschäftsorientierte Lösungen"}
             </h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-lg">
               {language === 'en'
                 ? "We design technology around your business goals, ensuring practical and measurable outcomes."
                 : "Wir entwerfen Technologie rund um Ihre Geschäftsziele und gewährleisten praktische und messbare Ergebnisse."}

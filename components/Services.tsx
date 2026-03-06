@@ -83,7 +83,7 @@ const ServicesSection = () => {
         },
       ],
     },
-    
+
     {
       sectionNumber: "02",
       title: language === "en" ? "ISO Compliance & Security Services " : "ISO Compliance & Security Services ",
@@ -205,14 +205,14 @@ const ServicesSection = () => {
               color: "bg-pink-200 text-pink-600",
               icon: "/support.png"
             },
-         
+
             {
               title: language === "en" ? "Digital & Innovation Solutions" : "Digitale & Innovationslösungen",
               desc: language === "en"
                 ? "Our modern digital solutions improve user experience, simplify workflows, and drive long-term business growth."
                 : "Unsere modernen digitalen Lösungen verbessern das Benutzererlebnis, vereinfachen Arbeitsabläufe und fördern langfristiges Geschäftswachstum.",
               color: "bg-indigo-200 text-indigo-600",
-              icon:"/support.png"
+              icon: "/support.png"
             },
             {
               title: language === "en" ? "ISO Compliance & Security Services" : "ISO-Konformität & Sicherheitsdienste",
@@ -220,15 +220,15 @@ const ServicesSection = () => {
                 ? "Compliance and security solutions that protect systems, manage risks, and ensure adherence to industry standards."
                 : "Konformitäts- und Sicherheitslösungen, die Systeme schützen, Risiken managen und die Einhaltung von Industriestandards gewährleisten.",
               color: "bg-orange-200 text-orange-600",
-              icon:"/infras.png"
+              icon: "/infras.png"
             },
-               {
+            {
               title: language === "en" ? "Complimentary Services" : "Komplementäre Dienstleistungen",
               desc: language === "en"
                 ? "Supporting services that enhance business operations through reliable infrastructure, enterprise systems, and cloud solutions."
                 : "Unterstützende Dienstleistungen, die Geschäftsabläufe durch zuverlässige Infrastruktur, Unternehmenssysteme und Cloud-Lösungen verbessern.",
               color: "bg-green-200 text-green-600",
-              icon:"/cloud.png"
+              icon: "/cloud.png"
             },
           ].map((card, i) => (
             <motion.div
@@ -276,10 +276,11 @@ const ServicesSection = () => {
       <div className="max-w-8xl p-10 mx-auto">
 
         {/* TOP CONTENT */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="flex items-center justify-center gap-6 max-w-4xl mx-auto mb-16">
+          <div className="flex-grow h-[2px] bg-[#18c5a9]"></div>
 
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-5xl font-bold text-gray-900 whitespace-nowrap"
             variants={fadeUp}
             initial="hidden"
             whileInView="show"
@@ -289,7 +290,7 @@ const ServicesSection = () => {
             {language === "en" ? "Complimentary Services" : "Komplementäre Dienstleistungen"}
           </motion.h2>
 
-
+          <div className="flex-grow h-[2px] bg-[#18c5a9]"></div>
         </div>
 
         {/* SERVICE CARDS */}

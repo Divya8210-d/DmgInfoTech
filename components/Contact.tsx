@@ -194,7 +194,8 @@ export default function ContactSection() {
                     <option value="Network Infrastructure">{t.contact.form.service4}</option>
                     <option value="Data Backup & Recovery">{t.contact.form.service5}</option>
                     <option value="Help Desk Support">{t.contact.form.service6}</option>
-                    <option value="Others">{t.contact.form.service7}</option>
+                    <option value="Social Media Management">{t.contact.form.service7}</option>
+                    <option value="Others">{t.contact.form.service8}</option>
                   </select>
                 </div>
 
