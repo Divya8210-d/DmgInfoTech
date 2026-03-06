@@ -21,9 +21,12 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "DMG Infotech",
-  description: "DMG Infotech is a leading provider of IT solutions and services to  worldwide clients.",
+  description:
+    "DMG Infotech is a leading provider of IT solutions and services to worldwide clients.",
+  icons: {
+    icon: "/company.jpeg",
+  },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
